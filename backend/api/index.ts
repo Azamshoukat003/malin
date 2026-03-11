@@ -4,15 +4,15 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
-import authRoutes from './routes/auth.routes';
-import playRoutes from './routes/play.routes';
-import uploadRoutes from './routes/upload.routes';
-import userRoutes from './routes/user.routes';
-import adminRoutes from './routes/admin.routes';
-import { generalRateLimit } from './middleware/rateLimit.middleware';
-import { errorHandler } from './middleware/error.middleware';
-import { env } from './config/env';
-import { connectDB } from './config/db';
+import authRoutes from '../src/routes/auth.routes';
+import playRoutes from '../src/routes/play.routes';
+import uploadRoutes from '../src/routes/upload.routes';
+import userRoutes from '../src/routes/user.routes';
+import adminRoutes from '../src/routes/admin.routes';
+import { generalRateLimit } from '../src/middleware/rateLimit.middleware';
+import { errorHandler } from '../src/middleware/error.middleware';
+import { env } from '../src/config/env';
+import { connectDB } from '../src/config/db';
 
 
 const app = express();
