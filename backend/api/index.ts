@@ -15,10 +15,11 @@ import { env } from '../src/config/env';
 import { connectDB } from '../src/config/db';
 
 
+console.log('>>> VERCEL API HANDLER LOADING...');
 const app = express();
 
 // DEBUG LOG FOR VERCEL
-console.log('Backend Function Initialized');
+console.log('>>> Backend Function Initialized');
 
 // Ensure DB is connected for serverless environments
 app.use(async (req, _res, next) => {
