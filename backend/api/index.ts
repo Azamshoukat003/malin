@@ -37,10 +37,10 @@ app.use(helmet());
 app.use(
   cors({
     origin: [
-      env.FRONTEND_URL, 
+      env.FRONTEND_URL,
       'http://localhost:3000',
-      'http://localhost:3002', 
-      'https://malin-front.vercel.app', 
+      'http://localhost:3002',
+      'https://malin-front.vercel.app',
       'https://malin1.vercel.app'
     ],
     credentials: true
