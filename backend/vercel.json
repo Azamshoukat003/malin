@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/app.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "complexity": 3,
+  "description": "Add vercel.json for backend deployment",
+  "emptyFile": false,
+  "isArtifact": false,
+  "overwrite": true,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/app.ts"
+    }
+  ],
+  "targetFile": "e:/mercurySols/Malinkiddy/Malinkiddy/backend/vercel.json"
+}
