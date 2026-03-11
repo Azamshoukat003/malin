@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
@@ -44,9 +45,25 @@ app.use(cookieParser());
 app.use(morgan('combined'));
 app.use(generalRateLimit);
 
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'MalinKiddy Backend API is running',
+    healthCheck: '/health'
+  });
+});
+
 app.get('/health', (req, res) => {
-  void req;
-  res.json({ success: true, data: { status: 'ok' }, error: null });
+  res.json({
+    success: true,
+    data: {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+      database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
+      env: process.env.NODE_ENV
+    },
+    error: null
+  });
 });
 
 app.use('/api/auth', authRoutes);
