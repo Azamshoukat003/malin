@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://malin1-backend.vercel.app/api/:path*'
+        destination: 'https://malin1.vercel.app/api/:path*'
       }
     ];
   }
