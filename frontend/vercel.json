@@ -1,24 +1,4 @@
 {
     "version": 2,
-    "framework": "nextjs",
-    "cleanUrls": true,
-    "trailingSlash": false,
-    "regions": [
-        "arn1"
-    ],
-    "rewrites": [
-        {
-            "source": "/api/:path*",
-            "destination": "https://malinkiddy-backend.vercel.app/api/:path*"
-        }
-    ],
-    "routes": [
-        {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
-    ]
+    "framework": "nextjs"
 }
